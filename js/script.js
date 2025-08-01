@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // No need to prevent default or handle manually
         });
     }
-    
+
     // Add hover effects to project items
     const projectItems = document.querySelectorAll('.project-item');
     
@@ -86,40 +86,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add click-to-copy functionality for email
-    const emailElements = document.querySelectorAll('a[href^="mailto:"], .contact-details li');
+    // // Add click-to-copy functionality for email
+    // const emailElements = document.querySelectorAll('a[href^="mailto:"], .contact-details li');
     
-    emailElements.forEach(element => {
-        const emailText = element.textContent.includes('@') ? 
-            element.textContent.trim() : 
-            'alyssa.companioni@gmail.com';
+    // emailElements.forEach(element => {
+    //     const emailText = element.textContent.includes('@') ? 
+    //         element.textContent.trim() : 
+    //         'alyssa.companioni@gmail.com';
             
-        if (emailText.includes('@')) {
-            element.style.cursor = 'pointer';
-            element.title = 'Click to copy email address';
+    //     if (emailText.includes('@')) {
+    //         element.style.cursor = 'pointer';
+    //         element.title = 'Click to copy email address';
             
-            element.addEventListener('click', function(e) {
-                if (e.target.tagName !== 'A') {
-                    e.preventDefault();
+    //         element.addEventListener('click', function(e) {
+    //             if (e.target.tagName !== 'A') {
+    //                 e.preventDefault();
                     
-                    // Copy to clipboard
-                    navigator.clipboard.writeText(emailText).then(function() {
-                        // Show feedback
-                        const originalText = element.textContent;
-                        element.textContent = 'Email copied!';
-                        element.style.color = 'var(--light-cyan)';
+    //                 // Copy to clipboard
+    //                 navigator.clipboard.writeText(emailText).then(function() {
+    //                     // Show feedback
+    //                     const originalText = element.textContent;
+    //                     element.textContent = 'Email copied!';
+    //                     element.style.color = 'var(--light-cyan)';
                         
-                        setTimeout(function() {
-                            element.textContent = originalText;
-                            element.style.color = '';
-                        }, 2000);
-                    }).catch(function() {
-                        alert('Email: ' + emailText);
-                    });
-                }
-            });
-        }
-    });
+    //                     setTimeout(function() {
+    //                         element.textContent = originalText;
+    //                         element.style.color = '';
+    //                     }, 2000);
+    //                 }).catch(function() {
+    //                     alert('Email: ' + emailText);
+    //                 });
+    //             }
+    //         });
+    //     }
+    // });
     
     // Typing animation for hero tagline
     const tagline = document.querySelector('.hero .tagline');
