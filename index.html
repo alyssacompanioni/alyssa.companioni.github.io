@@ -69,7 +69,9 @@
             <p>My expertise spans HTML, CSS, JavaScript, PHP, MySQL, and Java, but what really drives results is my approach: I communicate clearly, collaborate effectively, and never give up until the vision becomes reality. Whether I'm debugging tricky code at 2 AM or brainstorming with a team, I bring the same infectious enthusiasm and grit to get things done right.</p>
 
             <p>Based in the beautiful mountains of Asheville, North Carolina, I'm passionate about creating digital experiences that don't just work – they wow. I believe the best websites happen when technical expertise meets genuine human connection, and that's exactly what I deliver for every client and team I work with.</p>
-            <a href="#contact"><div class="hero-badge">👋 Available for opportunities</div></a>
+            <a href="#contact">
+              <div class="hero-badge">👋 Available for opportunities</div>
+            </a>
           </div>
           <div class="about-image">
             <img src="assets/me.jpg" alt="Alyssa Companioni - Full Stack Developer">
@@ -385,38 +387,52 @@
             </div>
             <ul class="project-list">
               <li class="project-item">
-                <div class="project-name">Elegant Occasions Website</div>
-                <span class="status-badge development">In Development</span>
-                <div class="project-description">Complete wedding planner website with full design implementation</div>
-                <div class="project-tech">
-                  <span class="tech-tag">Full-Stack</span>
-                  <span class="tech-tag">Web Design</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                </div>
+                <a href="#">
+                  <div class="project-content">
+                    <div class="project-name">Elegant Occasions Website</div>
+                    <span class="status-badge development">In Development</span>
+                    <div class="project-description">Complete wedding planner website with full design implementation</div>
+                    <div class="project-tech">
+                      <span class="tech-tag">Full-Stack</span>
+                      <span class="tech-tag">Web Design</span>
+                      <span class="tech-tag">PHP</span>
+                      <span class="tech-tag">MySQL</span>
+                    </div>
+                  </div>
+                </a>
               </li>
+
               <li class="project-item">
-                <div class="project-name">WEB 289 Capstone Project</div>
-                <span class="status-badge planned">Planned</span>
-                <div class="project-description">Main portfolio showcase project demonstrating advanced web development skills</div>
-                <div class="project-tech">
-                  <span class="tech-tag">Capstone</span>
-                  <span class="tech-tag">Advanced Development</span>
-                </div>
+                <a href="#">
+                  <div class="project-content">
+                    <div class="project-name">WEB 289 Capstone Project</div>
+                    <span class="status-badge planned">Planned</span>
+                    <div class="project-description">Main portfolio showcase project demonstrating advanced web development skills</div>
+                    <div class="project-tech">
+                      <span class="tech-tag">Capstone</span>
+                      <span class="tech-tag">Advanced Development</span>
+                    </div>
+                  </div>
+                </a>
               </li>
+
               <li class="project-item">
-                <div class="project-name">Spruce Dog Sitting Website</div>
-                <span class="status-badge planned">Planned</span>
-                <div class="project-description">
-                  Informational website combining all proof-of-concept examples with contact form integration
-                  <br><em>Will showcase: responsive design, animations, grid layout, and form handling</em>
-                </div>
-                <div class="project-tech">
-                  <span class="tech-tag">Form Integration</span>
-                  <span class="tech-tag">Responsive</span>
-                  <span class="tech-tag">Animations</span>
-                  <span class="tech-tag">CSS Grid</span>
-                </div>
+                <a href="https://sites.google.com/view/spruce-dog/home">
+                  <div class="project-content">
+                    <div class="project-name">Spruce Dog Sitting Website</div>
+                    <span class="status-badge planned">Planned</span>
+                    <div class="project-description">
+                      Informational website combining all proof-of-concept examples with contact form integration
+                      <br><em>Will showcase: responsive design, animations, grid layout, and form handling</em>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">Form Integration</span>
+                      <span class="tech-tag">Responsive</span>
+                      <span class="tech-tag">Animations</span>
+                      <span class="tech-tag">CSS Grid</span>
+                    </div>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -448,7 +464,7 @@
           </div>
 
           <div class="contact-form">
-            <form id="contact-form">
+            <form action="contact.php" method="POST" id="contact-form">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -465,6 +481,10 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
               </div>
+
+              <!-- Honeypot field for spam protection (hidden) -->
+              <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
+
               <button type="submit" class="btn-primary">Send Message</button>
             </form>
           </div>
