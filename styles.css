@@ -37,6 +37,15 @@ h1 {
   top: -9999px;
 }
 
+h2 {
+  font-family: "Lora", serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -90,6 +99,7 @@ nav {
 
 .logo-text {
   color: var(--text-light);
+  font-family: "Source Sans 3", sans-serif;
   font-weight: 600;
   font-size: 18px;
 }
