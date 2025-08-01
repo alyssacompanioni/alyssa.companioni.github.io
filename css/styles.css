@@ -483,6 +483,14 @@ nav {
   margin-bottom: 12px;
 }
 
+.project-quality {
+  color: var(--primary-teal);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
