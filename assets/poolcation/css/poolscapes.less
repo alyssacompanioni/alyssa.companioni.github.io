@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Tajawal|Kadwa");
+
+@accentColor0: #000;
+@accentColor1: #333;
+@accentColor2: #fff;
+@accentColor3: #f2f2f1;
+@accentColor4: #005583;
+@navBorder: #999 solid 1px;
+.border(@color, @borderThickness) {
+  border: @color solid @borderThickness;
+}
+.calcFontSize(@smallestFontSize, @largestFontSize) {
+  font-size: calc(unit(@smallestFontSize, px) + (@largestFontSize - @smallestFontSize) * (100vw - 320px) / (1200 - 320));
+}
+
+/***** 
+Coded for desktop-first
+Max font sizes for fluid text before media queries
+*****/
+/************* General Styles **************/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 17px/1.5 Tajawal, sans-serif;
+}
+
+body {
+  margin: 4rem 0 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Merriweather, serif;
+}
+
+img {
+  .border(@accentColor1, 1px);
+  height: auto;
+  max-width: 100%;
+}
+
+/******** Widths for anything needed to be centered on page **************/
+
+#page-header,
+nav ul,
+#pool-columns,
+#blurbs,
+footer p {
+  margin: 0 auto;
+  max-width: 1173px + 10;
+  width: 90%;
+}
+
+/******** Page Header *************/
+
+#page-header {
+  display: flex;
+  flex-wrap: wrap;
+  div:first-child {
+    flex: 1;
+    order: 2;
+    text-align: center;
+  }
+  div:last-child {
+    flex: 1;
+    margin-right: 0.5rem;
+    order: 1;
+  }
+  h1 {
+    font-size: 38px * 2;
+    margin: 0;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    font: bold small-caps 48px/1.5 Kadwa, serif;
+    margin: 0;
+  }
+}
+
+/************** Navbar ****************/
+
+nav {
+  background-color: @accentColor4;
+  border-top: @accentColor1 solid 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  ul {
+    padding: 0;
+  }
+  li {
+    display: inline;
+  }
+  a {
+    color: @accentColor2;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-decoration: none;
+    &:hover {
+      background-color: @accentColor2;
+      color: @accentColor1;
+    }
+  }
+}
+
+#nav-trigger {
+  background-color: @accentColor0;
+  color: @accentColor2;
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#nav-trigger,
+#nav-checkbox {
+  display: none;
+}
+
+/************ Main Header **************/
+
+main header {
+  background-color: @accentColor3;
+  border-bottom: @navBorder;
+  border-top: @navBorder;
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+  h2 {
+    font-size: 48px;
+    margin: 0;
+  }
+  p {
+    font-size: 36px;
+    margin: 0;
+  }
+}
+
+.phone {
+  font-size: 48px;
+  margin-bottom: 0;
+}
+
+/*********** Pool columns **************/
+
+#pool-columns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  section {
+    flex: 1;
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/************** Specials ************/
+
+#special {
+  background-color: @accentColor3;
+  border-bottom: @accentColor1 solid 1px;
+  border-top: @accentColor1 solid 1px;
+  padding: 1rem;
+  text-align: center;
+  h2 {
+    font-size: 5vw;
+    margin: 0;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+/***************** Blurbs **************/
+
+#blurbs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  section {
+    flex: 1;
+    margin-right: 1rem;
+    text-align: center;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  img {
+    .border(@accentColor4, 5px);
+    border-radius: 50%;
+  }
+}
+
+/************* Footer ****************/
+
+footer {
+  background-color: #deb887;
+  border-top: @accentColor1 solid 2px;
+  p {
+    padding: 1rem;
+  }
+}
+
+/************** Fluid text starts at 1200px *************/
+
+@media screen and (max-width: 1200px) {
+  #page-header h1 {
+    .calcFontSize(36, 76);
+  }
+
+  #page-header p,
+  main header h2 {
+    .calcFontSize(20, 48);
+  }
+
+  main header p {
+    .calcFontSize(18, 36);
+  }
+
+  .phone {
+    .calcFontSize(24, 48);
+  }
+}
+
+/************ 794px and narrower ****************/
+
+@media screen and (max-width: 794px) {
+  #nav-trigger,
+  #nav-checkbox:checked + ul,
+  nav li,
+  #pool-columns {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+  }
+
+  nav a {
+    border-bottom: @accentColor0 solid 2px;
+    display: block;
+    min-height: 45px;
+  }
+
+  #pool-columns img {
+    float: left;
+    margin: 0 2rem 1rem 0;
+  }
+
+  #pool-columns p {
+    clear: left;
+    margin-bottom: 2rem;
+  }
+}
+
+/************** 569px and narrower ****************/
+
+@media screen and (max-width: 569px) {
+  #page-header {
+    flex-direction: column-reverse;
+  }
+
+  #pool-columns img {
+    float: none;
+    margin: 0;
+  }
+
+  #blurbs {
+    display: block;
+    p {
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+/************** Minimum font thresholds *************/
+
+@media screen and (max-width: 320px) {
+  #page-header h1 {
+    font-size: 36px;
+  }
+
+  #page-header p,
+  main header h2 {
+    font-size: 20px;
+  }
+
+  .phone {
+    font-size: 24px;
+  }
+
+  main header p {
+    font-size: 18px;
+  }
+}

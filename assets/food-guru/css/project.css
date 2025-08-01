@@ -1,0 +1,295 @@
+ @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font: 17px/1.5 "Open Sans", sans-serif;
+  --accent-shadow: #333;
+  --spacing: .5rem;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/******** Header ********/
+
+body > header:first-of-type {
+  background-image: url("../images/banner.jpg");
+  font-family: "Audiowide", sans-serif;
+  margin-bottom: 1rem;
+  min-height: 200px;
+}
+
+h1 {
+  background-color: rgba(255,255,255,.5);
+  font-size: 5rem;
+  margin: 0;
+  padding: var(--spacing);
+}
+
+/******** Main ********/
+
+main {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/******** Specialties ********/
+
+#specialties {
+  padding: var(--spacing);
+}
+
+#specialties li {
+  border-bottom: 1px dotted #555;
+  list-style-image: url(../images/checkmark.png);
+  list-style-position: inside;
+  margin-bottom: var(--spacing);
+  padding-bottom: var(--spacing);
+}
+
+/******** Signup ********/
+
+#signup {
+  background-color: #f5b45b;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px var(--accent-shadow);
+  font-weight: bold;
+  margin: 0 var(--spacing);
+  padding: var(--spacing) 0 1rem;
+  text-align: center;
+}
+
+#signup img {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-shadow);
+}
+
+#signup p {
+  background-color: var(--accent-shadow);
+  border-bottom: 3px solid #000;
+  border-top: 3px solid #000;
+  color: #fff;
+  padding: 1rem;
+}
+
+#signup a {
+  background-color: #fff;
+  border-radius: .25rem;
+  color: var(--accent-shadow);
+  padding: var(--spacing);
+  text-decoration: none;
+}
+
+/******** Classes ********/
+
+#classes {
+  padding: var(--spacing);
+}
+
+#classes > div {
+  box-shadow: 0 0 5px #000;
+  padding-bottom: .5rem;
+}
+
+#classes div > p {
+  font-weight: bold;
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+
+#classes a {
+  color: #93630b;
+  padding-left: 1rem;
+}
+
+/******** Founder ********/
+
+#founder {
+  background-color: var(--accent-shadow);
+  border-bottom: 15px solid #000;
+  border-top: 15px solid #000;
+  color: #fff;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+#taril-photo {
+  border: 1px solid #fff;
+}
+
+/******** Testimonials ********/
+
+#testimonials {
+  padding: var(--spacing);
+}
+
+#testimonials > div {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fda400+1,f9d089+100 */
+  background: linear-gradient(135deg, #fda400 1%,#f9d089 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+#testimonials > div:nth-of-type(2) {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f1da36+0,fefcea+100 */
+  background: linear-gradient(135deg, #f1da36 0%,#fefcea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#testimonials blockquote {
+  font-style: italic;
+  margin: 0;
+  min-height: 44px;
+  padding: 0 70px;
+  position: relative;
+}
+
+#testimonials div p {
+  border-top: 1px dotted var(--accent-shadow);
+  font-size: .9rem;
+  font-weight: bold;
+  padding-top: var(--spacing);
+  text-align: right;
+}
+
+#testimonials blockquote:before {
+  background: url(../images/open-quote.png) no-repeat, 
+              url(../images/close-quote.png) no-repeat right bottom;
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: .3;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/******** Footer ********/
+
+footer {
+  background-color: var(--accent-shadow);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+/****************************** Grids ****************************/
+
+/*** Introduction ***/
+
+#introduction {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+}
+
+/*** Signup images ***/
+
+#signup div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+  width: 225px;
+}
+
+#signup1 {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+#signup2 {
+  grid-column: span 2 / -1;
+  grid-row: 1;
+}
+
+/*** Classes ***/
+
+#classes {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+#classes header {
+  grid-column: 1 / -1;
+}
+
+/*** Class cards ***/
+
+#classes div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+
+#classes div > img {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+#classes div > p {
+  align-self: end;
+  background-color: rgba(0, 0, 0, .6);
+  color: white;
+  grid-column: 1 / -1;
+  grid-row-end: 2;
+  padding: var(--spacing);
+}
+
+#classes a {
+  padding: var(--spacing);
+}
+
+/*** Founder ***/
+
+#founder {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(200px, 3fr) minmax(250px, 1fr);
+}
+
+/*** Testimonials ***/
+
+#testimonials {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#testimonials header {
+  grid-column: 1 / -1;
+}
+
+/************ Media Queries ************/
+
+/**** 860px ****/
+
+@media screen and (max-width: 860px) {
+  #testimonials {
+    display: block;
+    text-align: center; 
+  }
+
+  #testimonials > div {
+    margin-bottom: 1rem;
+  }
+}
+
+/**** 600px ****/
+
+@media screen and (max-width: 600px) {
+  #founder {
+    display: block;
+    text-align: center;
+  }
+}

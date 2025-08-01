@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Alyssa Companioni - Final Project</title>
+    <link href="css/final.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <a href="#main-content" id="skip-link">Jump to main content</a>
+    <h1>Portland</h1>
+
+    <div id="wrapper">
+      <header role="banner" id="main-header">
+        <a href="#"> <!-- ex: http://portland.com -->
+          <img src="assets/logo.png" alt="Portland logo." width="92" height="25">
+        </a>
+
+        <nav role="navigation" id="page-nav">
+          <label for="nav-checkbox" id="nav-trigger">&#9776; Menu</label>
+          <input type="checkbox" id="nav-checkbox">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Specials</a></li>
+            <li><a href="#">Devices</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Guarantee</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </nav>
+
+        <a href="#">
+          <div class="button" id="cart-container">
+            <img src="assets/cart.png" alt="Your shopping cart." width="18" height="17">
+            <p>cart <span>0</span></p>
+          </div>
+        </a>
+      </header>
+
+      <main role="main" id="main-content" tabindex="-1">
+        <header id="hero">
+          <a href="#">
+            <div>
+              <h2>iPhone 6 32Gb</h2>
+              <p>Black</p>
+              <p>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+              <div class="button" id="hero-button">Buy Now</div>
+            </div>
+            <img src="assets/iphone-cropped.png" width="300" height="500" alt="A black iphone 6 turned at an angle to show off its slim design." id="hero-product-img">
+          </a>
+        </header>
+
+        <section id="best-sellers">
+          <h2>Best Sellers</h2>
+          <a href="#">
+            <div>
+              <img src="assets/best-seller-beanie.jpg" width="149" height="146" alt="A classic dark green, wool beanie hat.">
+              <div>
+                <h3>Beanie</h3>
+                <p>Green</p>
+                <p><s>$39.99</s> $29.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/best-seller-shirt.jpg" width="155" height="156" alt="A dark blue t-shirt with white anchors crossed over one another.">
+              <div>
+                <h3>T-Shirt With a Print</h3>
+                <p>Dark Blue</p>
+                <p><s>$29.99</s> $19.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/best-seller-jacket.jpg" width="139" height="171" alt="A zip-up dark blue hooded jacket.">
+              <div>
+                <h3>Pile-Lined Hooded Jacket</h3>
+                <p>Dark Blue</p>
+                <p><s>$49.99</s> $39.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/best-seller-trainers.jpg" width="161" height="92" alt="A pair of trainer shoes in grey with laces and a canvas heel.">
+              <div>
+                <h3>Trainers</h3>
+                <p>Space Grey</p>
+                <p><s>$39.99</s> $29.99</p>
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <form action="#" method="get">
+          <div>
+            <label for="sort">Sort By:</label>
+            <select id="sort" name="sort">
+              <option value="best match">Best Match</option>
+              <option value="price">Price</option>
+
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Product Search</legend>
+            <div>
+              <label for="search">Keywords</label>
+              <input type="text" id="search">
+            </div>
+
+            <div>
+              <label for="price-low">Price</label>
+              <input type="number" id="price-low" name="price-low" value="10" min="1">
+
+              <label for="price-high">-</label>
+              <input type="number" id="price-high" name="price-high" value="100" min="2">
+            </div>
+          </fieldset>
+
+          <div>
+            <label for="shipto">Ship To:</label>
+            <select id="shipto" name="ship-to">
+              <option>USA</option>
+              <option>Canada</option>
+            </select>
+          </div>
+        </form>
+
+        <section id="products">
+          <h2>Products</h2>
+          <a href="#">
+            <div>
+              <img src="assets/product-apple-tc.jpg" width="198" height="198" alt="An Apple TV remote and receiver.">
+              <div>
+                <h3>Apple TV 32GB</h3>
+                <p>Black</p>
+                <p>$49.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/product-watch.jpg" width="141" height="175" alt="A basic electronic watch in red.">
+              <div>
+                <h3>Pebble Time</h3>
+                <p>Red</p>
+                <p>$29.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/product-usb-hub.jpg" width="256" height="209" alt="A white Zendure USB hub with four ports.">
+              <div>
+                <h3>Zendure 4-Port USB</h3>
+                <p>White</p>
+                <p>$49.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/product-scale.jpg" width="207" height="130" alt="A Withings electronic smart scale.">
+              <div>
+                <h3>Withings Smart Body Analyzer ws-50</h3>
+                <p>Black</p>
+                <p>$39.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/product-olio.jpg" width="196" height="196" alt="An Ollo camera lens clip.">
+              <div>
+                <h3>Ollo Clip New</h3>
+                <p>Silver</p>
+                <p>$19.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/product-fitbit.jpg" width="144" height="196" alt="A Fitbit Charge HR, a type of electronic fitness watch.">
+              <div>
+                <h3>Fitbit Charge HR</h3>
+                <p>Black</p>
+                <p>$19.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" id="jbl-charge">
+            <div>
+              <img src="assets/product-charger.jpg" width="570" height="305" alt="A JBL Charge bluetooth speaker.">
+              <div>
+                <div>
+                  <h3>JBL Charge 2+</h3>
+                  <p>Black</p>
+                  <p>$39.99</p>
+                </div>
+                <div class="button" id="jbl-button">
+                  <span>16 GB </span><span>Buy Now</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/product--apple-watch.jpg" width="194" height="194" alt="A white Apple Watch Sport.">
+              <div>
+                <h3>Apple Watch Sport</h3>
+                <p>White</p>
+                <p>$49.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/product-headphones.jpg" width="137" height="206" alt="Bose Soundlink On-Ear headphones in white.">
+              <div>
+                <h3>Bose SoundLink On-Ear headphones</h3>
+                <p>White</p>
+                <p>$119.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/product-hifi.jpg" width="143" height="189" alt="A wireless bluetooth Sonos Speaker.">
+              <div>
+                <h3>Sonos Play-1 Wireless HiFi System</h3>
+                <p>Black</p>
+                <p>$99.99</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div>
+              <img src="assets/product-nest.jpg" width="172" height="178" alt="A third generation Nest in black.">
+              <div>
+                <h3>Nest, 3rd Gen</h3>
+                <p>Black</p>
+                <p>$99.99</p>
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <nav id="product-nav">
+          <a href="#">
+            <p>&lt;</p>
+          </a>
+
+          <ol>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+          </ol>
+
+          <a href="#">
+            <p>&gt;</p>
+          </a>
+        </nav>
+      </main>
+
+      <aside role="complementary">
+        <header>
+          <h2>What Our Customers Have to Say</h2>
+          <p>Couple of Words About This Stories Section</p>
+        </header>
+
+        <div>
+          <img src="assets/customer-1.png" width="40" height="40" alt="A picture of a real customer, a blonde lady with glasses.">
+          <div>
+            <p>Celia Fields</p>
+            <p>UX Expert</p>
+          </div>
+          <blockquote>This I have produced as a scantling of Jack's great eloquence and the force of his reasoning upon such abstruse matters.</blockquote>
+        </div>
+
+        <div>
+          <img src="assets/customer-2.png" width="40" height="40" alt="A picture of a real customer, a brunette bearded man wearing a white button-down.">
+          <div>
+            <p>Alexander Lee</p>
+            <p>Founder</p>
+          </div>
+          <blockquote>Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</blockquote>
+        </div>
+
+        <div>
+          <img src="assets/customer-3.png" width="40" height="40" alt="A picture of a real customer, brunette woman with lots of makeup looking off to the side.">
+          <div>
+            <p>Lenora Sandoval</p>
+            <p>Product Manager</p>
+          </div>
+          <blockquote>This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that before!' she said.</blockquote>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div id="footer-wrapper">
+        <div> <!-- footer-header -->
+          <div>
+            <img src="assets/logo-white.png" width="92" height="25" alt="Portland logo.">
+          </div>
+          <nav id="footer-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+          <div>
+            <a><img src="assets/twitter.png" width="17" height="14" alt="Twitter icon."></a>
+            <a><img src="assets/facebook.png" width="9" height="18" alt="Facebook logo."></a>
+            <a><img src="assets/google-plus.png" width="24" height="15" alt="Google Plus icon."></a>
+          </div>
+        </div>
+
+        <div> <!-- footer-footer -->
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+
+</html>

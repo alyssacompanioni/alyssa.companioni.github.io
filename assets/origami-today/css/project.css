@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Yatra+One&display=swap');
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-4deg);
+  }
+
+  5% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(4deg);
+  }
+
+  15% {
+    transform: rotate(-4deg);
+  }
+
+  20% {
+    transform: rotate(0deg);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 17px 'Ubuntu', sans-serif;
+ }
+
+body {
+  background-image: url(../images/bg-paper.jpg);
+  padding-bottom: 2rem;
+}
+
+#wrapper {
+  background-color: rgba(255, 255, 255, .7);
+  box-shadow: 0 0 10px #000;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 960px;
+}
+
+/** Header **/
+
+header { 
+  display: flex;
+}
+
+h1 {
+  font: 6.5rem/1 'Yatra One', sans-serif;
+  order: 2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#logo {
+  margin-right: 2rem;
+}
+
+/** Nav **/
+
+nav {
+  align-items: center;
+  background-image: url(../images/nav-bg.png);
+  display: flex;
+  height: 111px;
+  justify-content: center;
+  opacity: .9;
+  transform: translateX(-59px); /*1044px(nav)-960(wrapper)=84px. 84/2=42. 42+17(padding)=59px */
+  width: 1044px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 1.5rem;
+}
+
+nav a {
+  color: #eaeaea;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #000;
+  text-shadow: -2px 0 2px #fff,
+                0 -2px 2px #fff,
+                2px 0 2px #fff,
+                0 2px 2px #fff;
+}
+
+/** Cards **/
+
+.book-thumbs {
+  perspective: 1500px;
+}
+
+.book-thumbs img {
+  height: 100px;
+  margin-bottom: .5rem;
+  opacity: .5;
+  transform: rotateY(60deg);
+  transition: all 1s;
+  width: 100px;
+}
+
+.book-thumbs img:hover {
+  opacity: 1;
+  position: relative;
+  transform: rotateY(0deg) scale(3);
+  z-index: 10;
+}
+
+.book-card {
+  background-color: #fff;
+  box-shadow: 0 0 5px #333;
+  display: grid;
+  grid-column: 1/-1;
+  grid-row: 1;
+  grid-gap: 1rem;
+  grid-template-columns: auto 1fr;
+  opacity: 0;
+  padding: 1rem;
+  transform: rotateY(90deg);
+  transition: all 2s;
+}
+
+input:checked + .book-card {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.book-card > img {
+  box-shadow: 0 0 5px #000;
+}
+
+.book-details {
+  grid-column: 1/-1;
+}
+
+.book-details h2,
+.book-details h3 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+/** Main interface **/
+
+main {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat( 4, 1fr);
+}
+
+input { 
+  display: none;
+}
+
+label {
+  background-color: #708090;
+  cursor: pointer;
+  overflow: hidden;
+  padding: .5rem;
+  position: relative;
+}
+
+label:before {
+  background-color: #008000;
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: .3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: all .5s;
+}
+
+label:hover:before {          
+  transform: translateX(1px);
+} 
+
+/** Add to Cart Button **/
+
+.book-card button {
+  animation: wiggle 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+.book-card button:hover {
+  animation-play-state: paused;
+}
